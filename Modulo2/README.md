@@ -1,5 +1,36 @@
 ### **Módulo 2: Instalación y Primeras Líneas de Código con Copilot**
 
+#### **Diversidad de Entornos y Lenguajes**
+
+Aunque este taller se centra en **Visual Studio Code**, GitHub Copilot también está disponible en:
+- [JetBrains IDEs (PyCharm, IntelliJ, WebStorm, etc.)](https://docs.github.com/en/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-your-ide)
+- [Neovim](https://docs.github.com/en/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-neovim)
+
+**Copilot soporta múltiples lenguajes. Ejemplos:**
+
+```typescript
+// TypeScript: función que suma dos números
+function sumar(a: number, b: number): number {
+  return a + b;
+}
+```
+
+```go
+// Go: función que verifica si un número es par
+func EsPar(n int) bool {
+  return n%2 == 0
+}
+```
+
+```ruby
+# Ruby: función que invierte una cadena
+def invertir_cadena(str)
+  str.reverse
+end
+```
+
+---
+
 #### **Objetivo**
 En este módulo, pasaremos de la teoría a la práctica. Te guiaré paso a paso para que instales y configures GitHub Copilot en tu entorno de desarrollo. Al final, escribirás tus primeras líneas de código con la asistencia de la IA y aprenderás los comandos básicos de interacción.
 
@@ -22,7 +53,32 @@ Esta es una duda muy común. La respuesta corta es **no**.
 
 ---
 
-#### **Paso 2: Instalación en VS Code**
+#### **Solución de Problemas Frecuentes (Troubleshooting)**
+
+**¿No ves la extensión Copilot?**
+- Asegúrate de buscar "GitHub Copilot" en el Marketplace de extensiones.
+- Revisa que tu VS Code esté actualizado.
+
+**¿Falla la autenticación?**
+- Intenta cerrar sesión y volver a iniciar sesión en GitHub desde VS Code.
+- Borra caché/cookies del navegador si la ventana de autenticación no carga.
+
+**¿Dónde buscar ayuda?**
+- [GitHub Copilot Help](https://docs.github.com/en/copilot/troubleshooting-github-copilot)
+- [Soporte de GitHub](https://support.github.com/)
+
+**Captura de pantalla de instalación:**
+![Instalación de Copilot en VS Code](../assets/copilot-install-vscode.png)
+
+---
+
+#### **Accesibilidad y Adaptaciones**
+
+- Copilot es compatible con lectores de pantalla y atajos de teclado alternativos.
+- [Guía oficial de accesibilidad](https://docs.github.com/en/copilot/using-github-copilot/accessibility)
+- Requisitos mínimos: Windows 10+, macOS 11+, Linux (kernel 5.4+). [Ver detalles](https://docs.github.com/en/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-visual-studio-code#system-requirements)
+
+---
 
 1.  Abre VS Code.
 2.  Ve al panel de **Extensiones** en la barra de actividades de la izquierda (o presiona `Ctrl+Shift+X` / `Cmd+Shift+X`).
@@ -32,10 +88,35 @@ Esta es una duda muy común. La respuesta corta es **no**.
 6.  Se abrirá tu navegador para que autorices a VS Code a acceder a tu cuenta de GitHub. Sigue los pasos.
 7.  ¡Listo! Si la autenticación fue exitosa, verás un pequeño ícono de Copilot en la barra de estado de VS Code, en la esquina inferior derecha.
 
-#### **Paso 3: Tu Primera Interacción con Copilot**
+#### **Checklist Interactiva: ¿Ya tienes todo listo?**
+
+- [ ] Cuenta de GitHub creada
+- [ ] IDE instalado (VS Code, JetBrains, Neovim)
+- [ ] Copilot instalado y autenticado
+- [ ] Primer prompt ejecutado
+
+---
+
+#### **Microdesafío Guiado: Tu Primer Prompt**
+
+Después de instalar Copilot, prueba este reto:
+
+> **Crea una función que reciba un número y devuelva si es par o impar.**
+
+Hazlo en el lenguaje de tu preferencia y acepta la sugerencia de Copilot. ¿El resultado es correcto? ¿Cómo lo mejorarías?
+
+---
+
+#### **Mini-evaluación: ¿Ya sabes...?**
+
+1. ¿Cómo aceptas una sugerencia de Copilot?
+2. ¿Cómo rechazas o alternas entre sugerencias?
+3. ¿Cómo abres el chat de Copilot y para qué lo usarías?
+
+---
 
 Vamos a ver a Copilot en acción.
-
+     
 1.  **Crea un nuevo archivo**: Crea un archivo con la extensión de tu lenguaje favorito (ej. `app.js` para JavaScript o `main.py` para Python).
 2.  **Sugerencias en línea (Inline Suggestions)**:
     *   Empieza a escribir el nombre de una función. Por ejemplo: `function diHola`
@@ -59,4 +140,51 @@ Copilot no solo sugiere código mientras escribes. También puedes "conversar" c
     *   `"escribe una función en python que reciba una lista y la devuelva sin duplicados"`
 3.  Copilot te responderá con explicaciones y fragmentos de código que puedes copiar o insertar directamente en tu archivo.
 
+
+---
+
+#### **Buenas Prácticas y Seguridad Desde el Inicio**
+
+> ⚠️ **Recuerda:** Toda sugerencia debe ser validada antes de usarse. Copilot puede reflejar errores si el contexto es ambiguo.
+
+**Diferencias clave:**
+- **Sugerencia automática:** Ideal para completar código rápido, patrones repetitivos o funciones simples.
+- **Chat de Copilot:** Útil para explicaciones, refactorización, generación de pruebas, documentación y tareas complejas.
+
+---
+
+#### **Recursos Visuales y Referencias**
+
+- [Video oficial: Primeros pasos con Copilot (YouTube)](https://www.youtube.com/watch?v=SGUCcjHTmGY)
+- [Guía de atajos de teclado Copilot VS Code](https://docs.github.com/en/copilot/using-github-copilot/getting-great-results-with-github-copilot#keyboard-shortcuts)
+- [Guía de atajos de teclado Copilot JetBrains](https://docs.github.com/en/copilot/using-github-copilot/getting-great-results-with-github-copilot-in-your-ide#keyboard-shortcuts)
+- [Guía de atajos de teclado Copilot Neovim](https://docs.github.com/en/copilot/using-github-copilot/getting-great-results-with-github-copilot-in-neovim#keyboard-shortcuts)
+
+---
+
+#### **Promueve la Experimentación**
+
+Prueba prompts ambiguos y específicos en distintos lenguajes. Compara los resultados y discútelos con tus compañeros.
+
+¿Notas diferencias en la calidad de las sugerencias? ¿Qué lenguaje te resultó más natural con Copilot?
+
+---
+
 Al final de este módulo, te sentirás cómodo con el flujo de trabajo básico de Copilot: recibir, aceptar y alternar sugerencias, y usar el chat para obtener ayuda más específica.
+
+
+---
+
+## Respuestas: Mini-evaluación ¿Ya sabes...?
+
+1. **¿Cómo aceptas una sugerencia de Copilot?**
+   - Presionando la tecla `Tab` cuando aparece la sugerencia en gris en tu editor.
+
+2. **¿Cómo rechazas o alternas entre sugerencias?**
+   - Para rechazar, simplemente sigue escribiendo o ignora la sugerencia. Para alternar entre sugerencias, usa los atajos `Alt+]` y `Alt+[` (o `Option+]` y `Option+[`) para ver diferentes opciones.
+
+3. **¿Cómo abres el chat de Copilot y para qué lo usarías?**
+   - Abres el chat haciendo clic en el ícono de Copilot Chat en la barra lateral o usando el atajo `Ctrl+Enter` (`Cmd+Enter` en Mac). El chat se usa para pedir explicaciones, generar código, resolver dudas, refactorizar, documentar o pedir ayuda más específica en lenguaje natural.
+
+
+---
